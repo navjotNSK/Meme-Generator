@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Count from './Count';
 
-export default function Counter() {
+export default function Count(props) {
     const [count, setCount] = React.useState(0)
     
     function add() {
@@ -24,10 +23,8 @@ export default function Counter() {
      *   the new Count component
      */
     return (
-        <div className="counter">
-            <button className="counter--minus" onClick={subtract}>–</button>
-            <Count number = {count} / >
-            <button className="counter--plus" onClick={add}>+</button>
-        </div>
+        <div className="counter--count">
+        <h1>{props.number}</h1>
+    </div>
     )
 }
